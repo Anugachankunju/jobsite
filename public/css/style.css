@@ -1,0 +1,71 @@
+
+h3 {
+  margin-top: -2rem;
+}
+
+.row {
+  margin-bottom: 1rem;
+}
+.row .row {
+  margin-top: 1rem;
+  margin-bottom: 0;
+}
+[class*="col-"] {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+ 
+}
+.btn-google {
+  color: white;
+  background-color: #ea4335;
+  font-size: 80%;
+  border-radius: 5rem;
+  letter-spacing: .1rem;
+  font-weight: bold;
+  padding: 1rem;
+  transition: all 0.2s;
+}
+
+
+.Sign-footer{
+
+  text-align: justify;
+  font-size: 14px;
+
+}
+.accnt-link{
+
+  text-align: center;
+  padding-top: 15px;
+  font-size: 0.855rem;
+}
+.btn-facebook {
+  color: white;
+  background-color: #3b5998;
+  font-size: 80%;
+  border-radius: 5rem;
+  letter-spacing: .1rem;
+  font-weight: bold;
+  padding: 1rem;
+  transition: all 0.2s;
+}
+.search-title{
+
+  font-size: .6875rem;
+    letter-spacing: 0;
+    font-weight: 400;
+    line-height: 1.46;
+
+
+}
+.job-btn{
+ 
+  padding-top: 64px;
+
+
+}
+
+hr {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
