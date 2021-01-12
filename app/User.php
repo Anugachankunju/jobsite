@@ -8,15 +8,17 @@ use Illuminate\Database\Eloquent\Relations\HasOne;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Cashier\Billable;
-use Spatie\MediaLibrary\HasMedia\HasMedia;
+// use Spatie\MediaLibrary\HasMedia\HasMedia;
 use Spatie\MediaLibrary\HasMedia\HasMediaTrait;
 use Spatie\MediaLibrary\Models\Media;
 use Spatie\Permission\Traits\HasRoles;
 
 
-class User extends Authenticatable implements HasMedia, MustVerifyEmail
+// class User extends Authenticatable implements HasMedia, MustVerifyEmail
+class User extends Authenticatable implements  MustVerifyEmail
 {
-    use Notifiable, HasRoles, HasMediaTrait, Billable;
+    // use Notifiable, HasRoles, HasMediaTrait, Billable;
+    use Notifiable;
 
     const PROFILE = 'profile-pictures';
 

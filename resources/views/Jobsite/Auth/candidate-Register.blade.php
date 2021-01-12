@@ -17,12 +17,11 @@
                             <div class="form-group">
                                  <label for="formGroupExampleInput" style="float: left;">Name</label>
                                  <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
-
-@error('name')
-    <span class="invalid-feedback" role="alert">
-        <strong>{{ $message }}</strong>
-    </span>
-@enderror
+                                @error('name')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
                             </div>
 
                                 <div class="form-group">
@@ -45,12 +44,12 @@
                                                 <label for="formGroupExampleInput2" style="float: left;">Password</label>
                                                 <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
 
-@error('password')
-    <span class="invalid-feedback" role="alert">
-        <strong>{{ $message }}</strong>
-    </span>
-@enderror
-                                            </div>
+                                                    @error('password')
+                                                        <span class="invalid-feedback" role="alert">
+                                                            <strong>{{ $message }}</strong>
+                                                        </span>
+                                                    @enderror
+                                                </div>
 
                                              <div class="form-group">
                                                 <label for="formGroupExampleInput2" style="float: left;">{{ __('Confirm Password') }}</label>

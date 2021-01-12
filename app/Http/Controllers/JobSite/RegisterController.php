@@ -2,13 +2,15 @@
 
 namespace App\Http\Controllers\Jobsite;
 
-use App\Http\Controllers\AppBaseController;
-use App\Http\Requests\SiteRegisterRequest;
-use App\Repositories\SiteRegisterRepository;
 use Flash;
-use Illuminate\Contracts\View\Factory;
-use Illuminate\Http\Resources\Json\JsonResource;
 use Illuminate\View\View;
+use Illuminate\Contracts\View\Factory;
+use App\Http\Requests\SiteRegisterRequest;
+use App\Http\Controllers\AppBaseController;
+use App\Repositories\SiteRegisterRepository;
+use Symfony\Component\HttpFoundation\Request;
+use Illuminate\Http\Resources\Json\JsonResource;
+use App\Http\Controllers\Controller;
 
 class RegisterController extends AppBaseController
 {
@@ -39,14 +41,15 @@ class RegisterController extends AppBaseController
     }
 
   
-    public function register(SiteRegisterRequest $request)
+    // public function register(SiteRegisterRequest $request)
+    public function register(Request $request)
     {
        
         $input = $request->all();
-        dd($input);
+        // dd($input);
         $this->SiteRegisterRepository->store($input);
         $userType = ($input['type'] == 1) ? 'Candidate' : 'Employer';
-        Flash::success('You have registered successfully, Activate your account from mail.');
+        // Flash::success('You have registered successfully, Activate your account from mail.');
 
         return $this->sendSuccess("{$userType} registration done successfully.");
     }

@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -26,9 +27,9 @@ Route::get('Candidate', 'Auth\Jobsite\LoginController@candidateLogin')->name('Jo
 Route::group(['namespace' => 'JobSite', 'middleware' => ['xss', 'setLanguage']], function () {
     
    // Route::get('/front-register', 'RegisterController@index')->name('Jobsite.register');
-    Route::get('/candidate-register', 'RegisterController@candidateRegister')->name('candidate.register');
+    Route::any('/candidate-register', 'RegisterController@candidateRegister')->name('candidate.register');
     Route::get('/employer-register', 'RegisterController@employerRegister')->name('employee.register');
-    Route::post('/register', 'RegisterController@register')->name('Jobsite.save.register');
+    Route::post('employer-register', 'RegisterController@register')->name('Jobsite.save.register');
 
 
 });
